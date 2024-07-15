@@ -1,0 +1,8 @@
+export { default as Button } from "./button"
+export { default as CardSlider } from "./card-slider"
+export { default as EmailInput } from "./email-input"
+export { default as Stars } from "./stars"
+export { default as GetInTouch } from "./get-in-touch"
+export { default as Calendly } from "./calendly"
+export { default as Testimonial } from "./testimonial"
+export { default as GetInTouch2 } from "./get-in-touch2"

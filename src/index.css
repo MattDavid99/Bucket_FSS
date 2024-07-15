@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .container-width {
+        width: min(100%, calc(90vw - 0px * 2));
+    }
+    .filter-blue {
+        filter: invert(51%) sepia(82%) saturate(5270%) hue-rotate(190deg)
+            brightness(103%) contrast(106%);
+    }
+}
