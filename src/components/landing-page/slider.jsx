@@ -1,5 +1,5 @@
-import { CardSlider } from '@components/common'
-import Carousel from 'react-multi-carousel'
+import { CardSlider } from '@components/common';
+import Carousel from 'react-multi-carousel';
 const responsive = {
   desktop: {
     breakpoint: {
@@ -25,7 +25,7 @@ const responsive = {
     items: 2,
     partialVisibilityGutter: 30,
   },
-}
+};
 
 // Here You can replace the data with your own data
 
@@ -33,32 +33,28 @@ const SliderCards = [
   {
     imageSrc: '/landing-page/Blog4.png',
     title: 'Insights For Your Business',
-    description:
-      'Discover insights, guids, articles,resources, and more from the team at Buckets',
+    description: 'Discover insights, guids, articles,resources, and more from the team at Buckets',
     link: '#',
   },
   {
     imageSrc: '/landing-page/Blog4.png',
     title: 'Insights For Your Business',
-    description:
-      'Discover insights, guids, articles,resources, and more from the team at Buckets',
+    description: 'Discover insights, guids, articles,resources, and more from the team at Buckets',
     link: '#',
   },
   {
     imageSrc: '/landing-page/Blog3.png',
     title: "What's New in Buckets",
-    description:
-      'Stay up to date with the latest features and updates from Buckets',
+    description: 'Stay up to date with the latest features and updates from Buckets',
     link: '#',
   },
   {
     imageSrc: '/landing-page/Blog2.png',
     title: 'Insights For Your Business',
-    description:
-      'Discover insights, guids, articles,resources, and more from the team at Buckets',
+    description: 'Discover insights, guids, articles,resources, and more from the team at Buckets',
     link: '#',
   },
-]
+];
 
 const Slider = () => {
   return (
@@ -68,9 +64,9 @@ const Slider = () => {
           Looking to Grow?
           <p className="break-words">We&apos;ve Got You covered.</p>
         </h2>
+
         <p className="font-fontRoboto text-base text-palletteColor6">
-          Interested in learning how to grow your business and better serve your
-          customers? Check out our latest posts!
+          Interested in learning how to grow your business and better serve your customers? Check out our latest posts!
         </p>
         <Carousel
           additionalTransfrom={0}
@@ -99,15 +95,14 @@ const Slider = () => {
           showDots={false}
           sliderClass=""
           slidesToSlide={1}
-          swipeable
-        >
+          swipeable>
           {SliderCards.map((card, index) => (
             <CardSlider key={index} {...card} />
           ))}
         </Carousel>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Slider
+export default Slider;
