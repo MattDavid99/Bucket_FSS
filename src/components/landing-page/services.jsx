@@ -38,7 +38,7 @@ const Services = () => {
             hidden: { opacity: 0, y: -100 },
           }}
           className="h-fit rounded-2xl border border-stone-200 p-6 relative">
-          <img src="/cartoon/hold-certificate.png" alt="Cartoon Image" className="absolute -top-28 left-4 hidden h-[7rem] lg:block" />
+          <img src="/cartoon/cleaner.png" alt="Cartoon Image" className="absolute -top-32 left-4 hidden h-[8rem] lg:block" />
           <img
             src="/landing-page/service1.jpg"
             className="h-[16.25rem] w-full rounded-t-2xl object-contain"

@@ -15,7 +15,7 @@ const Calendly = () => {
                     ></path>
                 </svg> */}
         <div className="flex justify-center items-center gap-2 absolute -top-7">
-          <img src="/cartoon/cross-arm.png" alt="Cartoon Image" className="top-0 left-0 hidden h-[6rem] lg:block" />
+          <img src="/cartoon/hold-certificate.png" alt="Cartoon Image" className="top-0 left-0 hidden h-[6rem] lg:block" />
 
           <h2 className="text-bold text-center font-fontOpen text-[1.625rem] text-palletteColor14">
             Chat With A Pro. Schedule An Easy-No Commitment Demo

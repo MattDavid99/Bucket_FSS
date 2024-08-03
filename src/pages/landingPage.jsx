@@ -9,6 +9,11 @@ const LandingPage = () => {
     <div>
       <section className="overflow-hidden bg-palletteColor10">
         <div className="container relative m-auto h-fit w-full lg:pt-16">
+          <img
+            className="absolute top-0 z-0 hidden xl:flex md:right-0 lg:-right-60 w-full object-cover h-full transform -rotate-6 opacity-10"
+            src="/cartoon/fields-bg.png"
+            alt=""
+          />
           <div className="relative h-fit">
             <div className="z-10 mt-36 md:ml-8">
               <h3 className="relative z-10 w-auto max-w-screen-xl text-wrap text-center font-fontBebas text-heading1 font-bold text-[#424241] md:text-left md:text-[6.25rem] lg:mt-40 lg:pr-96">
@@ -60,20 +65,11 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <img className="absolute top-0 z-0 md:right-0 lg:-right-60" src="/landing-page/bg.png" alt="" />
-            {/* <img
-                            className="absolute -top-20 right-20 hidden h-[45.59rem] lg:block"
-                            src="/landing-page/men.png"
-                            alt="Home Page Image Men"
-                        /> */}
+            {/* <img className="absolute top-0 z-0 md:right-0 lg:-right-60" src="/landing-page/bg.png" alt="" /> */}
+
             {/* CARTOON */}
 
-            {/* <img
-              src="/cartoon/thumbs-up-3d.png"
-              alt="Home Page Image Men"
-              className="absolute -top-10 -right-4 hidden h-[60rem] lg:block"
-            /> */}
-            <img src="/cartoon/hold-report.png" alt="Home Page Image Men" className="absolute top-0 right-10 hidden h-[40rem] lg:block" />
+            <img src="/cartoon/beard-cross-arm.png" alt="Home Page Image Men" className="absolute -top-32 right-8 hidden h-[60rem] lg:block" />
             <img
               className="absolute bottom-10 right-0 hidden h-44 translate-x-36 lg:block"
               src="/landing-page/boost.png"

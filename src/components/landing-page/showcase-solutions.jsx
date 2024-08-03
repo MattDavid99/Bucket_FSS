@@ -52,7 +52,7 @@ const ShowCaseSolutions = () => {
   return (
     <section className="container relative m-auto mt-12 grid grid-cols-1 grid-rows-1 gap-6 px-4 py-10 md:px-14 lg:grid-cols-2 lg:px-4 lg:py-8">
       {/* CARTOON */}
-      <img src="/cartoon/thumbs-up.png" alt="Cartoon Image" className="absolute -top-16 right-20 hidden h-[6rem] lg:block" />
+      <img src="/cartoon/male-cleaner.png" alt="Cartoon Image" className="absolute -top-24 right-20 hidden h-[8rem] lg:block" />
       <div>
         <h1 className="font-fontOpen text-heading1 font-bold text-palletteColor9">Everything you need, all in one place</h1>
         <p className="mt-4 font-fontRoboto text-base text-palletteColor6">
@@ -95,7 +95,6 @@ const ShowCaseSolutions = () => {
           </li>
         </ul>
         <button className="mt-4 transform font-fontOpen text-heading6 font-semibold text-palletteColor1 transition duration-500 hover:scale-125 hover:text-palletteColor5 lg:mt-5">
-          {' '}
           Learn More {'>'}
         </button>
       </div>
