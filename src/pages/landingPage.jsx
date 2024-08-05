@@ -69,9 +69,9 @@ const LandingPage = () => {
 
             {/* CARTOON */}
 
-            <img src="/cartoon/beard-cross-arm.png" alt="Home Page Image Men" className="absolute -top-32 right-8 hidden h-[60rem] lg:block" />
+            <img src="/cartoon/2ppl-lg-rm.png" alt="Home Page Image Men" className="absolute -top-36 -right-40 hidden h-[60rem] lg:block" />
             <img
-              className="absolute bottom-10 right-0 hidden h-44 translate-x-36 lg:block"
+              className="absolute bottom-2 right-8 hidden h-44 translate-x-32 lg:block"
               src="/landing-page/boost.png"
               alt="Efficiency Boost Card Image"
             />
