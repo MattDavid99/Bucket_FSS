@@ -7,16 +7,21 @@ import AnimatedCounter from '@components/Counter';
 const LandingPage = () => {
   return (
     <div>
-      <section className="overflow-hidden bg-palletteColor10">
-        <div className="container relative m-auto h-fit w-full lg:pt-16">
+      <section className="overflow-hidden bg-palletteColor10 ">
+        <div className="container relative m-auto h-fit w-full mt-44 md:mt-32 lg:mt-12">
+          <img
+            src="/cartoon/2ppl-lg-rm.png"
+            alt="Home Page Image Men"
+            className="absolute top-0 z-0 flex xl:hidden w-full object-cover h-full opacity-10 transform"
+          />
           <img
             className="absolute top-0 z-0 hidden xl:flex md:right-0 lg:-right-60 w-full object-cover h-full transform -rotate-6 opacity-10"
             src="/cartoon/fields-bg.png"
             alt=""
           />
           <div className="relative h-fit">
-            <div className="z-10 mt-36 md:ml-8">
-              <h3 className="relative z-10 w-auto max-w-screen-xl text-wrap text-center font-fontBebas text-heading1 font-bold text-[#424241] md:text-left md:text-[6.25rem] lg:mt-40 lg:pr-96">
+            <div className="z-10  md:ml-8 items-center flex flex-col xl:items-start">
+              <h3 className="relative z-10 w-auto max-w-screen-xl text-wrap flex justify-center text-center font-fontBebas text-heading1 font-bold text-[#424241] xl:text-left md:text-[6.25rem] lg:mt-40 xl:pr-96">
                 A FRESH TAKE FOR YOUR SERVICE COMPANY
                 <svg
                   className="absolute left-16 top-0 w-48 md:left-10 md:top-10 md:h-[9.375] md:w-[23.5rem]"
@@ -65,13 +70,18 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            {/* <img className="absolute top-0 z-0 md:right-0 lg:-right-60" src="/landing-page/bg.png" alt="" /> */}
-
             {/* CARTOON */}
-
-            <img src="/cartoon/2ppl-lg-rm.png" alt="Home Page Image Men" className="absolute -top-36 -right-40 hidden h-[60rem] lg:block" />
             <img
-              className="absolute bottom-2 right-8 hidden h-44 translate-x-32 lg:block"
+              src="/cartoon/2ppl-lg-rm.png"
+              alt="Home Page Image Men"
+              className="absolute hidden lg:block
+             xl:-bottom-20 2xl:top-20
+             lg:-right-40
+             lg:h-[30rem] xl:h-[40rem] 2xl:h-[60rem]
+             transition-all duration-300"
+            />
+            <img
+              className="absolute bottom-2 right-8 hidden h-44 translate-x-32 xl:block"
               src="/landing-page/boost.png"
               alt="Efficiency Boost Card Image"
             />

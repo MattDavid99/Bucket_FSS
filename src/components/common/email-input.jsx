@@ -3,14 +3,27 @@ const EmailInput = ({ className }) => {
   return (
     <form className={className}>
       <div className="relative flex justify-center md:justify-start">
-        <input
-          type="email"
-          className="h-[3.125rem] w-4/5 rounded-l-[1.563rem] border-b border-l border-t border-[#928F8F] ring-[#008CFF] focus:outline-none focus:ring-1 lg:w-[18rem] lg:pl-4"
-          placeholder="Enter your email"
-        />
-        <button className="rounded-e-[1.563rem] bg-[#008CFF] font-fontOpen text-sm font-medium text-white md:p-2 md:px-5 md:text-[1.063rem]">
-          START FREE TRIAL
-        </button>
+        <div class=" p-3 flex justify-center items-center">
+          <div>
+            <div class="relative bg-palletteColor10 h-12">
+              <input
+                type="text"
+                id="username"
+                name="username"
+                class="peer bg-transparent h-full items-center flex w-72 rounded-l-full text-gray-200 placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600"
+                placeholder="Enter your email"
+              />
+              <label
+                for="username"
+                class="absolute cursor-text left-2 -top-3 text-sm text-gray-500 bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">
+                Enter your email
+              </label>
+            </div>
+          </div>
+          <button className="rounded-r-full h-[52px] bg-[#008CFF] font-fontOpen border-2 border-[#008CFF] text-base font-medium text-white md:p-2 md:px-5 md:text-[1.063rem]">
+            START FREE TRIAL
+          </button>
+        </div>
       </div>
     </form>
   );
