@@ -4,7 +4,7 @@ const PickPlan = () => {
     const [checked, setChecked] = useState(true)
     return (
         <section className="mt-10 bg-white py-6 sm:py-8 md:mt-24 lg:py-12">
-            <div className="mx-auto px-2 md:max-w-screen-xl md:px-4 lg:max-w-screen-2xl">
+            <div className="mx-auto px-2 md:max-w-screen-xl md:px-4 lg:max-w-screen-2xl flex flex-col items-center">
                 <div className="mb-6 text-center">
                     <p className="text-heading6 text-palletteColor5">
                         PICK YOUR PLAN

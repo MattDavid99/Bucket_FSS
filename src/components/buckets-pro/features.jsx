@@ -124,7 +124,7 @@ const Features = () => {
                             />
                         </div>
                         <div>
-                            <h3 className="mb-2 text-xl font-bold">
+                            <h3 className="mb-2 xl:text-xl font-bold">
                                 {feature.title}
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400">

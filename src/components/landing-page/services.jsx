@@ -16,7 +16,7 @@ const Services = () => {
       <div className="text-center">
         <h4 className="mt-24 font-fontRoboto text-18 font-semibold text-[#928F8F] md:text-[1.375rem]">MAKE YOUR LIFE EASY</h4>
         <div>
-          <h2 className="m-auto my-4 px-14 font-fontOpen text-2xl font-bold leading-10 text-palletteColor9 md:text-heading1 lg:px-96">
+          <h2 className="m-auto my-4 px-14 font-fontOpen text-2xl font-bold leading-10 text-palletteColor9 md:text-heading1 xl:px-96">
             Simplify complex tasks
             <br />
             for <span className="text-palletteColor1">every service industry</span>
