@@ -22,7 +22,7 @@ const GetInTouch = () => {
                         Buckets has your back every step of the way. Take the
                         next step for your home cleaning business!
                     </p>
-                    <EmailInput className="" />
+                    <EmailInput />
                 </div>
             </div>
         </div>
