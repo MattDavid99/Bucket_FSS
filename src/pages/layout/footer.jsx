@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="container mx-auto w-full">
         <div className="flex flex-col items-center justify-center gap-7 border-b border-[#6C6C70] pb-12 lg:flex-row lg:justify-between lg:gap-0">
           <a href="/" className="flex justify-center lg:justify-start">
-            <img src="/footer/Best-White.png" alt="logo of buckets" className="w-40" />
+            <img src="/footer/Best-White-Check.png" alt="logo of buckets" className="w-40" />
           </a>
           <div className="flex gap-3">
             <a href="facebook">

@@ -82,7 +82,7 @@ const LandingPage = () => {
             />
             <img
               className="absolute bottom-2 right-8 hidden h-44 translate-x-32 xl:block"
-              src="/landing-page/boost.png"
+              src="/landing-page/boost-green.png"
               alt="Efficiency Boost Card Image"
             />
           </div>

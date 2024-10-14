@@ -30,15 +30,15 @@ const NavMenu = () => {
 
   return (
     <nav
-      className={`z-50 w-full px-7 py-3 font-fontbase transition-all duration-300 md:fixed md:px-[5rem] ${
-        isSticky ? 'fixed left-0 right-0 top-0 bg-black text-white' : 'bg-inherit bg-white'
+      className={`z-50 w-full px-7 py-3 z-1002 font-fontbase transition-all duration-300 md:fixed md:px-[5rem] ${
+        isSticky ? 'fixed left-0 right-0 top-0 bg-black text-white z-1002' : 'bg-inherit bg-white'
       } `}>
       <div className="container mx-auto">
         <div className="flex w-full flex-col lg:flex-row">
           <div className="flex justify-between lg:flex-row">
             <a href="/" className="flex w-36 items-center">
               <img
-                src={isSticky ? '/header/Best-White.png' : '/header/Best.png'}
+                src={isSticky ? '/header/Best-White-Check.png' : '/header/Best-Green.png'}
                 alt="Logo"
                 className="transition-opacity duration-300"
                 style={{ opacity: 1 }}
