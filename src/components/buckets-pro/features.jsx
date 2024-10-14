@@ -84,7 +84,7 @@ const Features = () => {
                   hidden: { pathLength: 0 },
                 }}
                 fill="none"
-                stroke="#008CFF"
+                stroke="#82ce51"
                 strokeWidth="9"
                 d="M7.7 145.6C109 125 299.9 116.2 401 121.3c42.1 2.2 87.6 11.8 87.3 25.7"></motion.path>
             </svg>

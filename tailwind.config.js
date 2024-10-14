@@ -11,7 +11,7 @@ export default {
         fontPoppins: ['Poppins', 'sans-serif'],
       },
       colors: {
-        palletteColor1: '#008CFF',
+        palletteColor1: '#82ce51',
         palletteColor2: '#ECF8FF',
         palletteColor3: '#252525',
         palletteColor4: '#2C2C32',

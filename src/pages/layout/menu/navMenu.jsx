@@ -38,7 +38,7 @@ const NavMenu = () => {
           <div className="flex justify-between lg:flex-row">
             <a href="/" className="flex w-36 items-center">
               <img
-                src={isSticky ? '/header/5.png' : '/header/4.png'}
+                src={isSticky ? '/header/Best-White.png' : '/header/Best.png'}
                 alt="Logo"
                 className="transition-opacity duration-300"
                 style={{ opacity: 1 }}
@@ -76,7 +76,7 @@ const NavMenu = () => {
                       style={({ isActive }) =>
                         isActive
                           ? {
-                              color: '#008CFF',
+                              color: '#82ce51',
                             }
                           : {}
                       }>
@@ -98,7 +98,7 @@ const NavMenu = () => {
                       style={({ isActive }) =>
                         isActive
                           ? {
-                              color: '#008CFF',
+                              color: '#82ce51',
                             }
                           : {}
                       }
@@ -173,7 +173,7 @@ const NavMenu = () => {
             </ul>
             <div className="ml-auto flex flex-col justify-center gap-y-4 lg:flex-row lg:items-center">
               <NavLink to="/pricing">
-                <button className="shadow-xs cursor-pointer rounded-[2.5rem] bg-[#008CFF] px-[2.12rem] py-3 text-center text-sm font-bold text-white transition-all duration-500 hover:bg-[#439eff] hover:text-black">
+                <button className="shadow-xs cursor-pointer rounded-[2.5rem] bg-[#82ce51] px-[2.12rem] py-3 text-center text-sm font-bold text-white transition-all duration-500 hover:bg-[##88A444] hover:text-black">
                   {' '}
                   TRY IF FOR FREE{' '}
                 </button>

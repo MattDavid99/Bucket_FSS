@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 @layer utilities {
-    .container-width {
-        width: min(100%, calc(90vw - 0px * 2));
-    }
-    .filter-blue {
-        filter: invert(51%) sepia(82%) saturate(5270%) hue-rotate(190deg)
-            brightness(103%) contrast(106%);
-    }
+  .container-width {
+    width: min(100%, calc(90vw - 0px * 2));
+  }
+  .filter-blue {
+    filter: invert(64%) sepia(21%) saturate(6189%) hue-rotate(49deg) brightness(100%) contrast(98%);
+    /* filter: invert(51%) sepia(82%) saturate(5270%) hue-rotate(190deg)
+            brightness(103%) contrast(106%); */
+  }
 }
