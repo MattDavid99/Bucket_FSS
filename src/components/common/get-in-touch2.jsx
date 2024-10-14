@@ -4,11 +4,7 @@ const GetInTouch2 = () => {
   return (
     <div className="py-28 bg-palletteColor10">
       <div className="relative mt-4 h-fit  px-14  block overflow-hidden">
-        <div className="absolute inset-0 bottom-28 flex items-center justify-center">
-          <img className="opacity-20 max-w-full h-64" src="/cartoon/3d-rocket.gif" />
-        </div>
-
-        <div className="relative flex flex-col items-center justify-center ">
+        <div className="relative flex flex-col items-center justify-center md:justify-start">
           <p className="font-Open text-center text-[1.375rem] font-semibold text-[#666666] md:text-left">
             GET IN TOUCH: <span className="text-palletteColor1">222-222-2222</span>
           </p>
