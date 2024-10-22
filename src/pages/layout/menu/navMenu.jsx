@@ -31,7 +31,7 @@ const NavMenu = () => {
   return (
     <nav
       className={`z-50 w-full px-7 py-3 z-1002 font-fontbase transition-all duration-300 md:fixed md:px-[5rem] ${
-        isSticky ? 'fixed left-0 right-0 top-0 bg-black text-white z-1002' : 'bg-inherit bg-white'
+        isSticky ? 'fixed left-0 right-0 top-0 bg-[#2d2c34] text-white z-1002' : 'bg-inherit bg-white'
       } `}>
       <div className="container mx-auto">
         <div className="flex w-full flex-col lg:flex-row">
