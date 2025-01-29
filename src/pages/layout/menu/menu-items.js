@@ -82,7 +82,6 @@ export const MenuItems = [
                     {
                         title: "Equipment Installation and Maintenance",
                         icon: "/navMenu/equipmentInstallation.svg",
-                        link: "javascript:",
                     },
                 ],
             },
@@ -97,12 +96,11 @@ export const MenuItems = [
                 subItems: [
                     {
                         title: "Contractor Software",
-
-                        link: "javascript:",
+                        link: "/buckets-pro",
                     },
                     {
                         title: "Dispatch and Scheduling Software",
-                        link: "javascript:",
+                        link: "/buckets-pro",
                     },
                 ],
             },
@@ -113,8 +111,8 @@ export const MenuItems = [
             {
                 title: "BUSINESS OPERATIONS",
                 subItems: [
-                    { title: "Tools and Shop Software", link: "javascript:" },
-                    { title: "Field Service Software", link: "javascript:" },
+                    { title: "Tools and Shop Software", link: "/buckets-pro" },
+                    { title: "Field Service Software", link: "/buckets-pro" },
                 ],
             },
         ],
