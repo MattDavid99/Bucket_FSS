@@ -71,8 +71,8 @@ const NavMenu = () => {
                 onClick={() => setToggleMobile(!toggleMobile)}>
                 <motion.div animate={{ rotate: toggleMobile ? 180 : 0 }} transition={{ duration: 0.3 }}>
                   <svg
-                    width="24"
-                    height="24"
+                    width="30"
+                    height="30"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -89,7 +89,7 @@ const NavMenu = () => {
             <NavMenuColapsable toggleMobile={toggleMobile} setToggleMobile={setToggleMobile} />
           </div>
 
-          <div className="ml-auto flex flex-col justify-center gap-y-4 lg:flex-row lg:items-center">
+          <div className="hidden sm:flex ml-auto flex flex-col justify-center gap-y-4 lg:flex-row lg:items-center">
             <NavLink to="/pricing">
               <button
                 className="shadow-xs cursor-pointer rounded-[2.5rem] bg-[#82ce51] px-[2.12rem] py-3 text-center text-sm font-bold text-white transition-all duration-500 hover:bg-[##88A444] hover:text-black"

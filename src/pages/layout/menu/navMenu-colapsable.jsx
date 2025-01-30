@@ -102,7 +102,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
 
   return (
     <motion.aside
-      className={`sidebar-transition w-full left-0 fixed z-50 h-screen bg-white shadow-lg  md:w-[300px]`}
+      className={`sidebar-transition w-full left-0 top-0 fixed z-50 h-screen bg-white shadow-lg  md:w-[300px]`}
       initial={false}
       animate={{
         x: toggleMobile ? 0 : '-100%',
@@ -113,7 +113,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
       }}>
       {/* Header */}
       <div className="flex items-center justify-between border-b p-4">
-        <img src="/header/Best-Green.png" alt="Logo" className="h-8 lg:h-14" />
+        <img src="/header/Best-Green.png" alt="Logo" className="h-14" />
         {/* Show close button only on mobile */}
         <button
           onClick={(e) => {
@@ -142,7 +142,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                       ${activeCategory === category.title ? 'bg-gray-50 text-palletteColor1' : 'hover:bg-gray-50 hover:text-palletteColor1'}`}>
                     <span className="font-semibold">{category.title}</span>
                     <svg
-                      className={`h-5 w-5 transition-transform ${activeCategory === category.title ? 'rotate-180' : ''}`}
+                      className={`h-7 w-7 transition-transform ${activeCategory === category.title ? 'rotate-180' : ''}`}
                       viewBox="0 0 20 20"
                       fill="currentColor">
                       <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
@@ -160,7 +160,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                             <span className="font-medium">{subcategory.title}</span>
                             {subcategory.subItems && (
                               <svg
-                                className={`h-4 w-4 transition-transform ${activeSubCategory === subcategory.title ? 'rotate-180' : ''}`}
+                                className={`h-5 w-5 transition-transform ${activeSubCategory === subcategory.title ? 'rotate-180' : ''}`}
                                 viewBox="0 0 20 20"
                                 fill="currentColor">
                                 <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
@@ -185,7 +185,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                                         <img
                                           src={item.icon}
                                           alt=""
-                                          className="h-5 w-5 transition-all duration-200"
+                                          className="h-6 w-6 transition-all duration-200"
                                           style={{
                                             filter: isActive
                                               ? 'invert(67%) sepia(29%) saturate(1122%) hue-rotate(54deg) brightness(100%) contrast(88%)'
