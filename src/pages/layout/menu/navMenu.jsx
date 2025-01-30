@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NavMenuColapsable from './navMenu-colapsable';
 import NavMenuMobile from './navMenu-mobile';
+import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const NavMenu = () => {
 
@@ -28,25 +30,40 @@ const NavMenu = () => {
       className={`z-50 w-full px-7 py-3 z-1002 font-fontbase transition-all duration-300 md:fixed md:px-[5rem] ${
         isSticky ? 'fixed left-0 right-0 top-0 bg-[#2d2c34] text-white z-1002' : 'bg-inherit bg-white'
       } `}>
-      <div className="container mx-auto">
+      <div className="container mr-auto">
         <div className="flex w-full flex-col lg:flex-row">
           <div className="flex justify-between lg:flex-row">
-            
+          <a href="/" className="flex w-36 items-center">
+              <img
+                src={isSticky ? '/header/Best-White-Check.png' : '/header/Best-Green.png'}
+                alt="Logo"
+                className="transition-opacity duration-300"
+                style={{ opacity: 1 }}
+              />
+            </a>
+            <motion.div
+            initial={{ translateX: 0 ,zIndex: 1000 ,rotate: "180deg"}}
+            animate={{ translateX: !toggleMobile ? "0" : "90px" ,rotate: toggleMobile ? "0" : "180deg"}}
+            // transition={{ duration: 0.5 }}
+
+            >
+
             <button
               data-collapse-toggle="megamenu-cta"
               type="button"
-              className="mobile-button ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+              className="mobile-button ml-3 inline-flex items-center rounded-lg p-1 text-sm text-gray-500   "
               aria-controls="navbar"
               aria-expanded="false"
-              onClick={() => setToggleMobile(true)}>
+              onClick={() => setToggleMobile(!toggleMobile)}>
               <span className="sr-only">Open main menu</span>
-              <svg className="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fillRule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clipRule="evenodd"></path>
-              </svg>
+              <img
+                src={ !isSticky ? '/header/icons8-login-50.png' : '/header/icons8-login-50-white.png'}
+                alt="Logo"
+                className="transition-opacity duration-300"
+                style={{ opacity: 1, width: "40px", height: "40px" }}
+              />
             </button>
+            </motion.div>
             <div className="hidden lg:block">
               <NavMenuColapsable toggleMobile={toggleMobile} setToggleMobile={setToggleMobile} />
             </div>
@@ -55,7 +72,14 @@ const NavMenu = () => {
               <NavMenuMobile toggleMobile={toggleMobile} setToggleMobile={setToggleMobile} />
             </div>
           </div>
-  
+          <div className="ml-auto flex flex-col justify-center gap-y-4 lg:flex-row lg:items-center">
+              <NavLink to="/pricing">
+                <button className="shadow-xs cursor-pointer rounded-[2.5rem] bg-[#82ce51] px-[2.12rem] py-3 text-center text-sm font-bold text-white transition-all duration-500 hover:bg-[##88A444] hover:text-black">
+                  {' '}
+                  TRY IF FOR FREE{' '}
+                </button>
+              </NavLink>
+            </div>
         </div>
       </div>
     </nav>

@@ -69,7 +69,7 @@ const AccordionsubItem = ({ header, isActive, ...rest }) => (
         {...rest}
         header={({ state: { isEnter } }) => (
             <>
-                <motion.svg
+                {/* <motion.svg
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -99,7 +99,7 @@ const AccordionsubItem = ({ header, isActive, ...rest }) => (
                         }}
                         transition={{ duration: 0 }}
                     />
-                </motion.svg>
+                </motion.svg> */}
                 <div
                     className="font-fontOpen text-base"
                     style={{ textTransform: "uppercase" }}
@@ -172,26 +172,28 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
     return (
         <>
             <motion.div
-                className="fixed inset-0 z-30 h-screen overflow-y-scroll overscroll-contain"
+                className="fixed inset-0 z-30 h-screen  "
                 initial={{ visibility: "hidden" }}
                 animate={{ visibility: toggleMobile ? "visible" : "hidden" }}
                 transition={{ duration: 0.2 }}
             />{" "}
             <motion.aside
-                className="scrollbar fixed left-0 top-0 z-40 h-screen w-80 overflow-y-scroll overscroll-contain bg-white"
+                className="scrollbar fixed left-0 top-9 z-40 h-screen w-80 scroll-auto bg-white"
                 initial={{
+                    top:"36px",
                     // translateX: "100%",
                     width: "0",
                     boxShadow: "none",
                     visibility: "hidden",
                 }}
                 animate={{
+                    top: isSticky ? "0" : "36px",
                     // translateX: !toggleMobile ? "0" : "100%",
                     width: toggleMobile ? "20rem" : "0",
                     boxShadow: toggleMobile ? "0 0 20px 0 black" : "none",
                     visibility: toggleMobile ? "visible" : "hidden",
                 }}
-                transition={{ type: "tween", duration: 0.4 }}
+                // transition={{ type: "tween", duration: 0.4 }}
             >
                 <div className="z-40 flex p-4 text-black">
                     {/* <span className="font-fontOpen text-heading6 font-semibold text-palletteColor5">
@@ -199,13 +201,13 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                     </span> */}
                     <a href="/" className="flex w-36 items-center">
                         <img
-                            src={isSticky ? '/header/Best-White-Check.png' : '/header/Best-Green.png'}
+                            src={'/header/Best-Green.png'}
                             alt="Logo"
                             className="transition-opacity duration-300"
                             style={{ opacity: 1 }}
                         />
                     </a>
-                    <button onClick={handleClick} className="ml-auto">
+                    {/* <button onClick={handleClick} className="ml-auto">
                         <motion.svg
                             animate={{
                                 rotate: isRotated ? 180 : 0,
@@ -222,8 +224,10 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                         >
                             <path d="M1 15a1 1 0 01-.71-.29 1 1 0 010-1.41l5.8-5.8-5.8-5.8A1 1 0 011.7.29l5.8 5.8 5.8-5.8a1 1 0 011.41 1.41l-5.8 5.8 5.8 5.8a1 1 0 01-1.41 1.41l-5.8-5.8-5.8 5.8A1 1 0 011 15z"></path>
                         </motion.svg>
-                    </button>
+                    </button> */}
                 </div>
+{
+    toggleMobile && (
 
                 <div className="mx-2 my-4 text-black">
                     {/* `transitionTimeout` prop should be equal to the transition duration in CSS */}
@@ -279,7 +283,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                                                                                   "3rem",
                                                                           }}
                                                                       >
-                                                                          <svg
+                                                                          {/* <svg
                                                                               width="24"
                                                                               height="24"
                                                                               viewBox="0 0 24 24"
@@ -293,7 +297,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                                                                                   r="2"
                                                                                   fill="#D1D5DB"
                                                                               />
-                                                                          </svg>
+                                                                          </svg> */}
                                                                           {subsubitem.icon && (
                                                                               <img
                                                                                   src={
@@ -347,13 +351,20 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                         )}
                     </ControlledAccordion>
                 </div>
-                <NavLink
-                    to="/pricing"
+    )
+}
+
+                {
+                    toggleMobile && (
+                        <NavLink
+                            to="/pricing"
                     onClick={() => setToggleMobile(false)}
                     className="mt-6 flex justify-center"
                 >
                     <Button>TRY IT FOR FREE</Button>
                 </NavLink>
+                )
+            }
             </motion.aside>
         </>
     )
