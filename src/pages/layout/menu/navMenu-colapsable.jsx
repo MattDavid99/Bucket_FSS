@@ -102,26 +102,27 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
 
   return (
     <motion.aside
-      className={`fixed z-50 h-screen bg-white shadow-lg md:w-[300px]
-        ${toggleMobile ? 'left-0 top-0 w-full' : '-left-full'}`}
+      className={`sidebar-transition w-full left-0 fixed z-50 h-screen bg-white shadow-lg  md:w-[300px]`}
       initial={false}
       animate={{
         x: toggleMobile ? 0 : '-100%',
-        transition: {
-          type: 'tween',
-          duration: 0.3,
-          ease: 'easeInOut',
-        },
+      }}
+      transition={{
+        duration: 0.3,
+        ease: 'easeInOut',
       }}>
       {/* Header */}
       <div className="flex items-center justify-between border-b p-4">
-        <img src="/header/Best-Green.png" alt="Logo" className="h-8" />
+        <img src="/header/Best-Green.png" alt="Logo" className="h-8 lg:h-14" />
         {/* Show close button only on mobile */}
         <button
-          onClick={() => setToggleMobile(false)}
-          className="rounded p-2 hover:bg-gray-100 hover:text-red-500 md:hidden"
+          onClick={(e) => {
+            e.preventDefault();
+            setToggleMobile(false);
+          }}
+          className="rounded text-black p-2 hover:bg-gray-100 hover:text-red-500"
           aria-label="Close menu">
-          <svg className="h-6 w-6 " viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M6 18L18 6M6 6l12 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
