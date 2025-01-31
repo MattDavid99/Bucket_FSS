@@ -4,7 +4,7 @@ import { EmailInput } from '@components/common';
 const FreeTrailSection = () => {
   return (
     <section className="w-full bg-palletteColor10">
-      <div className="container relative m-auto grid grid-cols-1 grid-rows-1 gap-6 px-4 py-28 md:mt-12 md:grid-cols-2 md:px-14">
+      <div className="container relative m-auto grid grid-cols-1 grid-rows-1 gap-6 px-4 py-28 md:mt-12 lg:grid-cols-2 md:px-14">
         <div className="py-8">
           <p className="font-fontOpen text-palletteColor5">FREE 14-DAY TRIAL</p>
           <h1 className="font-fontOpen text-heading1 font-bold leading-[3.25rem] text-palletteColor9">

@@ -21,8 +21,17 @@ const EmailInput = ({ className }) => {
               </label>
             </div>
           </div>
-          <button className="rounded-r-full h-[52px] bg-[#82ce51] font-fontOpen border-2 px-1 border-[#82ce51] text-base font-medium text-white md:p-2 md:px-5 md:text-[1.063rem]">
-            START FREE TRIAL
+          <button className="rounded-r-full h-[52px] bg-[#82ce51] font-fontOpen border-2 px-1  border-[#82ce51] text-base font-medium text-white  md:p-2 md:text-[1.063rem] flex items-center justify-center">
+            <span className="hidden md:inline">START FREE TRIAL</span>
+            <svg className="w-6 h-6 md:hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5 12H19M19 12L12 5M19 12L12 19"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
         </div>
       </div>
