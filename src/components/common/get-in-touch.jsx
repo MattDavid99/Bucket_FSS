@@ -1,7 +1,7 @@
 import { EmailInput } from '@components/common';
 const GetInTouch = () => {
   return (
-    <div className="relative mt-4 h-fit bg-palletteColor10 px-14 py-28">
+    <div className="relative mt-4 h-fit bg-palletteColor10 px-4 lg:px-14 py-12 lg:py-28">
       <div className="flex flex-col items-center justify-center">
         <p className="font-Open text-center text-[1.375rem] font-semibold text-[#666666] md:text-left">
           GET IN TOUCH: <span className="text-palletteColor1">222-222-2222</span>

@@ -8,7 +8,7 @@ const LandingPage = () => {
   return (
     <div>
       <section className="overflow-hidden bg-palletteColor10 ">
-        <div className="container relative m-auto h-fit w-full mt-44 md:mt-32 lg:mt-12">
+        <div className="container p-4 relative m-auto h-fit w-full mt-5  md:mt-32 lg:mt-12">
           <img
             src="/cartoon/2ppl-lg-rm.png"
             alt="Home Page Image Men"
@@ -44,10 +44,12 @@ const LandingPage = () => {
               <p className="z-10 mb-8 text-center text-base text-[#928F8F] md:px-6 md:text-left md:text-xl lg:px-1">
                 Drive Buisness Success with Our Efficient and Easy-to-Use Software
               </p>
+
               {/* Free Trail Form */}
-              <EmailInput className="mb-12" />
+              <EmailInput className=" lg:mb-12" />
+
               {/* Counts */}
-              <div className="mb-16 mt-20 flex justify-center gap-8 md:flex-row md:justify-start md:gap-16 lg:gap-20">
+              <div className="mb-12 lg:mb-16 mt-5 lg:mt-20 flex justify-center gap-8 md:flex-row md:justify-start md:gap-16 lg:gap-20">
                 <div className="space- z-10 flex flex-col space-y-4">
                   <span className="text-center font-fontBebas text-2xl font-bold text-[#424241] md:text-[2.5rem]">
                     <AnimatedCounter from={0} to={10} />+

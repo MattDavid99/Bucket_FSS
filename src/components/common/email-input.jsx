@@ -3,7 +3,7 @@ const EmailInput = ({ className }) => {
   return (
     <form className={className}>
       {/* <div className="relative flex justify-center md:justify-start"> */}
-      <div className="relative flex justify-start md:justify-center">
+      <div className="relative flex justify-center">
         <div className=" p-3 flex justify-center items-center">
           <div>
             <div className="relative bg-palletteColor10 h-12">
