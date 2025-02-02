@@ -11,7 +11,7 @@ const Layout = () => {
       <Header />
       <Outlet />
       <Footer />
-      {/* <ChatWidget /> */}
+      <ChatWidget />
     </div>
   );
 };
