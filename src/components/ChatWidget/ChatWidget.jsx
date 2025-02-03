@@ -5,8 +5,9 @@ import { BsChatDots } from 'react-icons/bs';
 import { AiOutlineClose } from 'react-icons/ai';
 import { initializeThread, processMessage } from '../../openai/openaiService';
 
+
 const ASSISTANT_ID = import.meta.env.VITE_ASSISTANT_ID;
-console.log('ass', ASSISTANT_ID);
+
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const ChatWidget = () => {
   const messagesEndRef = useRef(null);
   const [hasUnread, setHasUnread] = useState(true);
 
+
   useEffect(() => {
     const initChat = async () => {
       try {
@@ -30,26 +32,32 @@ const ChatWidget = () => {
       }
     };
 
+
     if (isOpen) {
       initChat();
     }
   }, [isOpen]);
 
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
 
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
 
+
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
+
 
     const userMessage = { text: input, isUser: true };
     setMessages((prev) => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
+
 
     try {
       const response = await processMessage(input, ASSISTANT_ID);
@@ -67,10 +75,12 @@ const ChatWidget = () => {
     }
   };
 
+
   const handleChatOpen = () => {
     setIsOpen(true);
     setHasUnread(false);
   };
+
 
   return (
     <div className="fixed bottom-5 right-5 z-50 font-fontPoppins">
@@ -89,6 +99,7 @@ const ChatWidget = () => {
               </button>
             </div>
 
+
             {/* Messages */}
             <div className="h-[400px] overflow-y-auto p-4">
               {messages.map((message, index) => (
@@ -98,10 +109,19 @@ const ChatWidget = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className={`mb-4 flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
                   <div
-                    className={`max-w-[80%] rounded-xl px-4 py-2 ${
+                    className={`max-w-[80%] whitespace-pre-line rounded-xl px-4 py-2 ${
                       message.isUser ? 'bg-palletteColor1 text-white' : 'bg-palletteColor10 text-palletteColor5'
                     }`}>
-                    {message.text}
+                    {message.text.split('**').map((part, i) => (
+                      <span key={i} className={i % 2 === 1 ? 'font-bold' : ''}>
+                        {part.split('\n').map((line, lineIndex) => (
+                          <React.Fragment key={lineIndex}>
+                            {lineIndex > 0 && <br />}
+                            {line}
+                          </React.Fragment>
+                        ))}
+                      </span>
+                    ))}
                   </div>
                 </motion.div>
               ))}
@@ -116,6 +136,7 @@ const ChatWidget = () => {
               )}
               <div ref={messagesEndRef} />
             </div>
+
 
             {/* Input */}
             <div className="border-t border-palletteColor12 p-4">
@@ -140,6 +161,7 @@ const ChatWidget = () => {
         )}
       </AnimatePresence>
 
+
       {/* Updated Chat Button with notification */}
       <div className="relative">
         <motion.button
@@ -149,6 +171,7 @@ const ChatWidget = () => {
           className="flex h-14 w-14 items-center justify-center rounded-full bg-palletteColor1 text-white shadow-lg">
           <BsChatDots size={24} />
         </motion.button>
+
 
         {/* Notification Animation */}
         {!isOpen && hasUnread && (
@@ -171,5 +194,6 @@ const ChatWidget = () => {
     </div>
   );
 };
+
 
 export default ChatWidget;
