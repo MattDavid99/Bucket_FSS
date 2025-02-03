@@ -1,15 +1,4 @@
-# GoBuckets
-
-## Project Title : Migrate GoBuckets (5 Pages) Website to React
-
-<!--toc:start-->
-
--   [GoBuckets](#gobuckets)
-    -   [Project Structure 🏗](#project-structure-🏗)
-    -   [Technologies Used 🛠](#technologies-used-🛠)
-    -   [Table Guide 📚](#table-guide-📚) - [How To Run it Locally](#how-to-run-it-locally) - [How To Host it on Docker](#how-to-host-it-on-docker) - [How To Add a New Section](#how-to-add-a-new-section) - [How To Add a New Page](#how-to-add-a-new-page) - [How to Update Footer Menu](#how-to-update-footer-menu) - [How to add a new menu item](#how-to-add-a-new-menu-item) - [Tailwind Config](#tailwind-config) - [How to handle nested routes](#how-to-handle-nested-routes)
-    <!--toc:end-->
-
+# Best Scheduling
 ## Project Structure 🏗
 
 ```
