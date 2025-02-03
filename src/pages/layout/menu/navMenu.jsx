@@ -35,7 +35,7 @@ const NavMenu = () => {
 
   return (
     <nav
-      className={`z-50 w-full px-7 py-3 font-fontbase transition-all duration-300 md:fixed md:px-[5rem] ${
+      className={`z-[9999999] w-full px-7 py-3 font-fontbase transition-all duration-300 md:fixed md:px-[5rem] ${
         isSticky ? 'fixed left-0 right-0 top-0 bg-[#2d2c34] text-white' : 'bg-inherit bg-white'
       }`}>
       <div className="max-w-screen-2xl mx-auto">
