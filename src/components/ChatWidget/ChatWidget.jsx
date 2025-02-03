@@ -6,7 +6,6 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { initializeThread, processMessage } from '../../openai/openaiService';
 
 const ASSISTANT_ID = import.meta.env.VITE_ASSISTANT_ID;
-console.log('ass', ASSISTANT_ID);
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -98,10 +97,19 @@ const ChatWidget = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className={`mb-4 flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
                   <div
-                    className={`max-w-[80%] rounded-xl px-4 py-2 ${
+                    className={`max-w-[80%] whitespace-pre-line rounded-xl px-4 py-2 ${
                       message.isUser ? 'bg-palletteColor1 text-white' : 'bg-palletteColor10 text-palletteColor5'
                     }`}>
-                    {message.text}
+                    {message.text.split('**').map((part, i) => (
+                      <span key={i} className={i % 2 === 1 ? 'font-bold' : ''}>
+                        {part.split('\n').map((line, lineIndex) => (
+                          <React.Fragment key={lineIndex}>
+                            {lineIndex > 0 && <br />}
+                            {line}
+                          </React.Fragment>
+                        ))}
+                      </span>
+                    ))}
                   </div>
                 </motion.div>
               ))}

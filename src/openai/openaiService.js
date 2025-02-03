@@ -54,7 +54,32 @@ export const processMessage = async (message, assistantId) => {
     // Return the latest assistant message
     const lastMessage = messages.data.filter((message) => message.role === 'assistant')[0];
 
-    return lastMessage.content[0].text.value;
+    // Log the original response and annotations
+    // console.log('Original response:', lastMessage.content[0].text.value);
+    // console.log('annotations', lastMessage.content[0].text.annotations);
+
+    // Get the text value and annotations
+    const text = lastMessage.content[0].text.value;
+    const annotations = lastMessage.content[0].text.annotations || [];
+
+    // Remove the annotations from the text
+    let cleanedResponse = text;
+    if (annotations.length > 0) {
+      // Sort annotations in reverse order to handle overlapping annotations
+      annotations.sort((a, b) => b.start_index - a.start_index);
+
+      // Remove each annotation from the text
+      annotations.forEach((annotation) => {
+        cleanedResponse = cleanedResponse.slice(0, annotation.start_index) + cleanedResponse.slice(annotation.end_index);
+      });
+    }
+
+    cleanedResponse = cleanedResponse.trim();
+
+    // Log the cleaned response
+    // console.log('Cleaned response:', cleanedResponse);
+
+    return cleanedResponse;
   } catch (error) {
     console.error('Error processing message:', error);
     throw error;
