@@ -113,7 +113,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
       }}>
       {/* Header */}
       <div className="flex items-center justify-between border-b p-4">
-        <img src="/header/Best-Green.png" alt="Logo" className="h-14" />
+        <img src="/header/AAA-MAIN.png" alt="Logo" className="h-10" />
         {/* Show close button only on mobile */}
         <button
           onClick={(e) => {

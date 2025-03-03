@@ -46,10 +46,12 @@ const NavMenu = () => {
               className={`flex w-36 items-center transition-opacity duration-300 ${toggleMobile ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
               aria-label="Go to homepage">
               <img
-                src={isSticky ? '/header/Best-White-Check.png' : '/header/Best-Green.png'}
+                src={isSticky ? '/header/AAA-MAIN-WHITE.png' : '/header/AAA-MAIN.png'}
+                // src={isSticky ? '/header/Best-White-Check.png' : '/header/Best-Green.png'}
                 alt="Buckets Logo"
-                width="144"
-                height="40"
+                // width="144"
+                // height="40"
+                style={{ width: '240px', height: 'auto', maxWidth: 'none' }}
                 className="transition-opacity duration-400"
               />
             </a>
@@ -69,10 +71,11 @@ const NavMenu = () => {
                   isSticky ? 'text-white' : 'text-gray-800'
                 }`}
                 onClick={() => setToggleMobile(!toggleMobile)}>
-                <motion.div animate={{ rotate: toggleMobile ? 180 : 0 }} transition={{ duration: 0.3 }}>
+                <motion.div animate={{ rotateX: toggleMobile ? 10 : 0 }} transition={{ duration: 0.1 }}>
                   <svg
-                    width="30"
-                    height="30"
+                    className="ml-24 mt-2"
+                    width="25"
+                    height="25"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"

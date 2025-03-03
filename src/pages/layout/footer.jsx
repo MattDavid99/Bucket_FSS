@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Logo and Social Media Section */}
         <div className="flex flex-col items-center justify-center gap-7 border-b border-[#6C6C70] pb-12 px-4 lg:flex-row lg:justify-between lg:gap-0">
           <a href="/" className="flex justify-center lg:justify-start" aria-label="Buckets home">
-            <img src="/footer/Best-White-Check.png" alt="Buckets logo" className="w-40" />
+            <img src="/footer/AAA-MAIN-WHITE.png" alt="Buckets logo" className="w-60" />
           </a>
 
           <nav className="flex gap-3" aria-label="Social media links">
