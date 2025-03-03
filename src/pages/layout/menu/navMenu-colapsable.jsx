@@ -116,16 +116,16 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
         <img src="/header/AAA-MAIN.png" alt="Logo" className="h-10" />
         {/* Show close button only on mobile */}
         <button
-          onClick={(e) => {
-            e.preventDefault();
-            setToggleMobile(false);
-          }}
-          className="rounded text-black p-2 hover:bg-gray-100 hover:text-red-500"
-          aria-label="Close menu">
-          <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M6 18L18 6M6 6l12 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
+  onClick={(e) => {
+    e.preventDefault();
+    setToggleMobile(false);
+  }}
+  className="rounded text-black p-1 hover:bg-gray-100 hover:text-red-500 flex items-center justify-center"
+  aria-label="Close menu">
+  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path d="M6 18L18 6M6 6l12 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+</button>
       </div>
 
       {/* Navigation */}
