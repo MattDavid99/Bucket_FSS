@@ -13,7 +13,7 @@ const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
-      text: "👋 Hello! I'm your Best Scheduling assistant. How can I help you today?",
+      text: "👋 Hello! I'm your My Field Service assistant. How can I help you today?",
       isUser: false,
     },
   ]);

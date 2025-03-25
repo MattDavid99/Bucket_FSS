@@ -8,7 +8,7 @@ const GetInTouch = () => {
         </p>
         <h2 className="mb-6 text-center font-fontOpen text-heading2 font-bold text-palletteColor9 md:text-left">Let us earn your trust</h2>
         <p className="mb-6 text-center font-fontOpen text-palletteColor5 md:text-left">
-          Buckets has your back every step of the way. Take the next step for your home cleaning business!
+          My Field Service has your back every step of the way. Take the next step for your home cleaning business!
         </p>
         <EmailInput className="w-full" />
       </div>

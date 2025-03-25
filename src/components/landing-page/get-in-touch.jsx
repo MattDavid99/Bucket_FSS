@@ -50,7 +50,7 @@ const GetInTouch = () => {
         <p className="font-fontOpen text-[1.375rem] font-semibold text-palletteColor14">
           GET IN TOUCH: <span className="text-palletteColor1">222-222-2222</span>
         </p>
-        <h2 className="font-fontOpen text-[1.563rem] font-bold text-[#31343A] mb-2">Revolutionize how work is done with Buckets</h2>
+        <h2 className="font-fontOpen text-[1.563rem] font-bold text-[#31343A] mb-2">Revolutionize how work is done with My Field Service</h2>
         <p className="font-fontOpen text-base text-[#373940] max-w-2xl mx-auto">
           Streamline your workflow, boost productivity, and take control of your business with our innovative bucket system.
         </p>

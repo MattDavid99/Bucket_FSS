@@ -23,7 +23,7 @@ const Services = () => {
           </h2>
         </div>
         <p className="m-auto mb-8 mt-2 px-14 font-fontOpen text-base font-medium text-palletteColor14 md:px-56">
-          Buckets offers a comprehensive suite of top-tier functionalities tailored for home services enterprises, seamlessly integrated
+          My Field Service offers a comprehensive suite of top-tier functionalities tailored for home services enterprises, seamlessly integrated
           <br />
           within a user-friendly application.
         </p>

@@ -41,9 +41,9 @@ const Service1 = () => {
   return (
     <div className="container relative m-auto mt-12 px-4 py-10 md:px-14">
       <div className="mb-2 text-center">
-        <p className="font-fontOpen text-base text-heading6 font-medium text-palletteColor5">TRUSTED BY 40,000+ BUSINESSES</p>
+        <p className="font-fontOpen text-base text-heading6 font-medium text-palletteColor5">TRUSTED BY 400+ BUSINESSES</p>
         <h1 className="font-fontOpen text-headingMobile font-bold text-palletteColor9 md:text-heading2">
-          How does client management work in Buckets?
+          How does client management work with My FIeld Service?
         </h1>
       </div>
       <div className="mt-5 grid grid-cols-1 grid-rows-1 items-start gap-6 md:grid-cols-2">

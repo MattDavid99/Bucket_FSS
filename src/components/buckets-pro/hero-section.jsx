@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div className="container relative m-auto pb-16 pt-56 md:mt-12">
         <p className="text-center font-fontOpen text-heading6 text-white md:text-left">Products</p>
         <h2 className="text-center font-fontOpen text-headingLargeMobile font-bold text-white md:text-left md:text-headingLarge">
-          Buckets Pro+
+          My FIeld Service Pro+
         </h2>
         <div className="flex justify-center md:justify-start">
           <Button>Start Free Trial</Button>

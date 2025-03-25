@@ -58,10 +58,10 @@ export const FooterMenu = [
         ],
     },
     {
-        title: "Buckets Software",
+        title: "My Field Service Software",
         links: [
             {
-                title: "Buckets Pro+",
+                title: "My Field Service Pro+",
                 link: "javascript:;",
             },
             {

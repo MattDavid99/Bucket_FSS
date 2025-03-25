@@ -90,8 +90,8 @@ const Footer = () => {
                 <div className="border-l border-gray-500">
                   <div className="ml-2">
                     <p className="text-[0.625rem] text-[#FFFFFF66]">Email</p>
-                    <a href="mailto:support@buckets.com" className="text-[0.75rem] text-white">
-                      support@buckets.com
+                    <a href="mailto:support@myfieldservice.com" className="text-[0.75rem] text-white">
+                      support@myfieldservice.com
                     </a>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ const Footer = () => {
           <p className="font-fontInter text-sm text-white">
             © 2024 All rights reserved by{' '}
             <a href="/" className="hover:text-palletteColor1">
-              Buckets
+              My Field Service
             </a>
           </p>
           <nav className="flex space-x-4" aria-label="Legal links">

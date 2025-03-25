@@ -70,7 +70,7 @@ const GridServices = () => {
           </div>
           <div>
             <h2 className="my-4 font-fontRoboto text-heading5 font-bold text-palletteColor9 transition-all duration-300 hover:-skew-x-12">
-              Connect Buckets
+              Connect To My Field Service
             </h2>
             <p className="font-fontOpen text-14 text-palletteColor5">
               Ut enim ad minima veniam, quis nostrum exercitationem ullam, Ut enim ad minima veniam, quis nostrum exercitationem ullam

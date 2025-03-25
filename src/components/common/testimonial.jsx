@@ -15,7 +15,7 @@ const Testimonial = () => {
           <Stars className="justify-start" />
           <h2 className="mt-4 font-fontPoppins text-heading4 font-medium leading-[2.188rem] text-palletteColor9">
             &quot;I absolutely love this app and the crew behind it! Every
-            single person that I have interacted with at Buckets has been
+            single person that I have interacted with at My Field Service has been
             phenomenal! Definitely a partner for life. &quot;
           </h2>
           <h3 className="mt-5 font-fontOpen font-medium text-palletteColor5">

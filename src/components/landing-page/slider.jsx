@@ -25,25 +25,25 @@ const SliderCards = [
   {
     imageSrc: '/landing-page/Blog4.png',
     title: 'Insights For Your Business',
-    description: 'Discover insights, guids, articles,resources, and more from the team at Buckets',
+    description: 'Discover insights, guids, articles,resources, and more from the team at My Field Service',
     link: '#',
   },
   {
     imageSrc: '/landing-page/Blog4.png',
     title: 'Insights For Your Business',
-    description: 'Discover insights, guids, articles,resources, and more from the team at Buckets',
+    description: 'Discover insights, guids, articles,resources, and more from the team at My Field Service',
     link: '#',
   },
   {
     imageSrc: '/landing-page/Blog3.png',
-    title: "What's New in Buckets",
-    description: 'Stay up to date with the latest features and updates from Buckets',
+    title: "What's New in My Field Service",
+    description: 'Stay up to date with the latest features and updates from My Field Service',
     link: '#',
   },
   {
     imageSrc: '/landing-page/Blog2.png',
     title: 'Insights For Your Business',
-    description: 'Discover insights, guids, articles,resources, and more from the team at Buckets',
+    description: 'Discover insights, guids, articles,resources, and more from the team at My Field Service',
     link: '#',
   },
 ];

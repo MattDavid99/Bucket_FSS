@@ -12,7 +12,7 @@ const CallUsNowSection = () => {
                         We’re here to help
                     </h1>
                     <p className="mb-5 font-fontPoppins text-18 text-palletteColor5">
-                        Contact us by phone or email us at support@buckets.com
+                        Contact us by phone or email us at support@myfieldservice.com
                     </p>
                     <Button>CALL US NOW</Button>
                 </div>

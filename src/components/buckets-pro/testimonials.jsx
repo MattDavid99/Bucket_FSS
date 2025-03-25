@@ -87,7 +87,7 @@ const Testimonials = () => {
                     </div>
 
                     <p className="font-fontOpen text-heading6 text-palletteColor13">
-                      Before we had Buckets. a lot of our issues were trying to get all our customers into one database.
+                      Before we had My Field Service. a lot of our issues were trying to get all our customers into one database.
                     </p>
                   </div>
                 </div>

@@ -11,7 +11,7 @@ const FreeTrailSection = () => {
             Plumbing software that ignites business growth
           </h1>
           <p className="mb-5 mt-4 font-fontPoppins text-18 font-normal text-palletteColor5">
-            Buckets’s all-in-one business software for plumbing companies and contractors simplifies field-related tasks, allowing you to
+            My Field Service all-in-one business software for plumbing companies and contractors simplifies field-related tasks, allowing you to
             focus on growing your business to its full potential.
           </p>
           <EmailInput />

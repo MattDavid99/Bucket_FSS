@@ -35,7 +35,7 @@ const Features1 = () => {
           <h3 className="mb-2 text-center font-fontOpen text-heading3 font-bold text-palletteColor9 md:text-heading3">Support</h3>
 
           <p className="mb-2 text-center font-fontOpen text-base text-palletteColor5">
-            Our team is always here to assist you with Buckets. Please contact us anytime for a smooth experience.
+            Our team is always here to assist you with My Field Service. Please contact us anytime for a smooth experience.
           </p>
 
           <Button variant="secondary"> Learn More {'>'}</Button>
