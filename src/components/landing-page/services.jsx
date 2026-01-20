@@ -61,7 +61,7 @@ const Services = () => {
             hidden: { opacity: 0, y: -100 },
           }}>
           <img
-            src="/landing-page/service2.jpg"
+            src="/landing-page/Customers-Img.png"
             className="h-[16.25rem] w-full rounded-t-2xl object-contain"
             alt="Service for Active Customer Engagement"
           />
