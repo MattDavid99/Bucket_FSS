@@ -35,8 +35,10 @@ const NavMenu = () => {
 
   return (
     <nav
-      className={`z-[9999999] w-full px-7 py-3 font-fontbase transition-all duration-300 md:fixed md:px-[5rem] ${
-        isSticky ? 'fixed left-0 right-0 top-0 bg-[#2d2c34] text-white' : 'bg-inherit bg-white'
+      className={`z-[9999999] w-full px-7 transition-all duration-300 md:fixed md:px-[5rem] ${
+        isSticky
+          ? 'fixed left-0 right-0 top-0 bg-primary-950/95 glass-nav shadow-lg py-2 text-white'
+          : 'bg-white py-4'
       }`}>
       <div className="max-w-screen-2xl mx-auto">
         <div className="flex w-full flex-wrap gap-y-4">
@@ -95,7 +97,10 @@ const NavMenu = () => {
           <div className="hidden sm:flex ml-auto flex flex-col justify-center gap-y-4 lg:flex-row lg:items-center">
             <NavLink to="/pricing">
               <button
-                className="shadow-xs cursor-pointer rounded-[2.5rem] bg-[#82ce51] px-[2.12rem] py-3 text-center text-sm font-bold text-white transition-all duration-500 hover:bg-[##88A444] hover:text-black"
+                className="cursor-pointer rounded-full bg-accent px-8 py-3 text-center text-sm font-bold text-white
+                           shadow-md hover:shadow-lg hover:bg-accentHover
+                           transform hover:-translate-y-0.5
+                           transition-all duration-300 btn-shine"
                 aria-label="Try it for free">
                 TRY IT FOR FREE
               </button>

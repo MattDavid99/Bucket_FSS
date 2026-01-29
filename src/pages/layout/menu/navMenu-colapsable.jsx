@@ -102,7 +102,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
 
   return (
     <motion.aside
-      className={`sidebar-transition w-full left-0 top-0 fixed z-50 h-screen bg-white shadow-lg  md:w-[300px]`}
+      className={`sidebar-transition w-full left-0 top-0 fixed z-50 h-screen bg-white shadow-hover md:w-[320px]`}
       initial={false}
       animate={{
         x: toggleMobile ? 0 : '-100%',
@@ -112,37 +112,39 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
         ease: 'easeInOut',
       }}>
       {/* Header */}
-      <div className="flex items-center justify-between border-b p-4">
+      <div className="flex items-center justify-between border-b border-slate-100 p-5">
         <img src="/header/AAA-MAIN.png" alt="Logo" className="h-10" />
-        {/* Show close button only on mobile */}
         <button
-  onClick={(e) => {
-    e.preventDefault();
-    setToggleMobile(false);
-  }}
-  className="rounded text-black p-1 hover:bg-gray-100 hover:text-red-500 flex items-center justify-center"
-  aria-label="Close menu">
-  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-    <path d="M6 18L18 6M6 6l12 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-</button>
+          onClick={(e) => {
+            e.preventDefault();
+            setToggleMobile(false);
+          }}
+          className="rounded-lg text-textSecondary p-2 hover:bg-slate-100 hover:text-primary-950
+                     transition-colors duration-200 flex items-center justify-center"
+          aria-label="Close menu">
+          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 18L18 6M6 6l12 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
       </div>
 
       {/* Navigation */}
-      <nav className="h-[calc(100vh-64px)] overflow-y-auto text-black">
-        <div className="p-4">
+      <nav className="h-[calc(100vh-140px)] overflow-y-auto text-primary-950">
+        <div className="p-5">
           {MenuItems.map((category, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-3">
               {category.items ? (
                 // Links with dropdowns
                 <>
                   <button
                     onClick={() => setActiveCategory(activeCategory === category.title ? null : category.title)}
-                    className={`flex w-full items-center justify-between rounded-lg p-3 text-left transition-colors
-                      ${activeCategory === category.title ? 'bg-gray-50 text-palletteColor1' : 'hover:bg-gray-50 hover:text-palletteColor1'}`}>
-                    <span className="font-semibold">{category.title}</span>
+                    className={`flex w-full items-center justify-between rounded-xl p-3 text-left transition-all duration-200
+                      ${activeCategory === category.title
+                        ? 'bg-accent/10 text-accent'
+                        : 'hover:bg-slate-50 text-primary-950'}`}>
+                    <span className="font-fontInter font-semibold">{category.title}</span>
                     <svg
-                      className={`h-7 w-7 transition-transform ${activeCategory === category.title ? 'rotate-180' : ''}`}
+                      className={`h-5 w-5 transition-transform duration-200 ${activeCategory === category.title ? 'rotate-180' : ''}`}
                       viewBox="0 0 20 20"
                       fill="currentColor">
                       <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
@@ -150,17 +152,19 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                   </button>
 
                   {activeCategory === category.title && (
-                    <div className="mt-2 space-y-2 pl-4">
+                    <div className="mt-2 space-y-1 pl-4">
                       {category.items.map((subcategory, subIndex) => (
                         <div key={subIndex}>
                           <button
                             onClick={() => setActiveSubCategory(activeSubCategory === subcategory.title ? null : subcategory.title)}
-                            className={`flex w-full items-center justify-between rounded-md p-2 text-left text-sm transition-colors
-                              ${activeSubCategory === subcategory.title ? 'text-palletteColor1' : 'text-gray-600 hover:bg-gray-50 hover:text-palletteColor1'}`}>
-                            <span className="font-medium">{subcategory.title}</span>
+                            className={`flex w-full items-center justify-between rounded-lg p-2.5 text-left text-sm transition-colors
+                              ${activeSubCategory === subcategory.title
+                                ? 'text-accent'
+                                : 'text-textSecondary hover:bg-slate-50 hover:text-accent'}`}>
+                            <span className="font-fontInter font-medium">{subcategory.title}</span>
                             {subcategory.subItems && (
                               <svg
-                                className={`h-5 w-5 transition-transform ${activeSubCategory === subcategory.title ? 'rotate-180' : ''}`}
+                                className={`h-4 w-4 transition-transform duration-200 ${activeSubCategory === subcategory.title ? 'rotate-180' : ''}`}
                                 viewBox="0 0 20 20"
                                 fill="currentColor">
                                 <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
@@ -169,15 +173,15 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                           </button>
 
                           {activeSubCategory === subcategory.title && subcategory.subItems && (
-                            <div className="ml-4 mt-2 space-y-2">
+                            <div className="ml-4 mt-1 space-y-1">
                               {subcategory.subItems.map((item, itemIndex) => (
                                 <NavLink
                                   key={itemIndex}
                                   to={item.link}
                                   onClick={() => setToggleMobile(false)}
                                   className={({ isActive }) =>
-                                    `flex items-center gap-3 rounded-md p-2 text-sm transition-colors group
-                                ${isActive ? 'text-palletteColor1' : 'text-black hover:bg-gray-50 hover:text-palletteColor1'}`
+                                    `flex items-center gap-3 rounded-lg p-2.5 text-sm transition-colors
+                                     ${isActive ? 'text-accent bg-accent/5' : 'text-textSecondary hover:bg-slate-50 hover:text-accent'}`
                                   }>
                                   {({ isActive }) => (
                                     <>
@@ -185,7 +189,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                                         <img
                                           src={item.icon}
                                           alt=""
-                                          className="h-6 w-6 transition-all duration-200"
+                                          className="h-5 w-5 transition-all duration-200"
                                           style={{
                                             filter: isActive
                                               ? 'invert(67%) sepia(29%) saturate(1122%) hue-rotate(54deg) brightness(100%) contrast(88%)'
@@ -193,7 +197,7 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                                           }}
                                         />
                                       )}
-                                      <span>{item.title}</span>
+                                      <span className="font-fontInter">{item.title}</span>
                                     </>
                                   )}
                                 </NavLink>
@@ -211,8 +215,8 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
                   to={category.link}
                   onClick={() => setToggleMobile(false)}
                   className={({ isActive }) =>
-                    `block rounded-lg p-3 text-base font-medium transition-colors
-                    ${isActive ? 'bg-gray-50 text-palletteColor1' : 'text-gray-700 hover:bg-gray-50 hover:text-palletteColor1'}`
+                    `block rounded-xl p-3 font-fontInter text-base font-medium transition-all duration-200
+                    ${isActive ? 'bg-accent/10 text-accent' : 'text-primary-950 hover:bg-slate-50 hover:text-accent'}`
                   }>
                   {category.title}
                 </NavLink>
@@ -223,9 +227,13 @@ const NavMenuColapsable = ({ toggleMobile, setToggleMobile }) => {
       </nav>
 
       {/* Footer */}
-      <div className="absolute bottom-0 left-0 w-full border-t bg-white p-4">
+      <div className="absolute bottom-0 left-0 w-full border-t border-slate-100 bg-white p-5">
         <NavLink to="/pricing" onClick={() => setToggleMobile(false)} className="block w-full">
-          <button className="w-full rounded-full bg-palletteColor1 px-6 py-3 text-sm font-bold text-white transition-all hover:bg-opacity-90 hover:text-black duration-300 ease-out">
+          <button className="w-full rounded-full bg-accent hover:bg-accentHover px-6 py-3.5
+                           font-fontInter text-sm font-bold text-white
+                           shadow-md hover:shadow-lg
+                           transform hover:-translate-y-0.5
+                           transition-all duration-300">
             TRY IT FOR FREE
           </button>
         </NavLink>

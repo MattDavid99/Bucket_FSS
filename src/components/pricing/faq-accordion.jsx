@@ -38,22 +38,20 @@ const AccordionItem = ({ header, ...rest }) => (
 
 const faqData = [
     {
-        question: "How much does My Field Service cost per month ?",
-        answer: "My Field Service costs vary by plan. Customers can choose from Basic, Essentials, or Max plan, with pricing starting at $49 per month.",
+        question: "How much does My Field Service cost?",
+        answer: "Plans start at $49 per user per month. Choose Basic, Essentials, or MAX depending on your team size and needs. All plans include core features like scheduling, dispatching, and invoicing.",
     },
     {
-        question: "What does my My Field Service plan include?",
-        answer: "Features vary by plan, but every My Field Service customer gets access to estimates, scheduling, and invoicing tools that make running a service business easier. If you have questions about specifics included in our plans, call us at 123-456-7891 to get started with the right plan for you.",
+        question: "What's included in each plan?",
+        answer: "Every plan includes scheduling, dispatching, estimates, invoicing, and customer management. Higher tiers add features like advanced reporting, integrations, and priority support. See the feature comparison above for details.",
     },
     {
-        question:
-            "How does My Field Service’s pricing compare against other field service management software?",
-        answer: "My Field Service is competitively-priced against other field service management apps. And, with My Field Service, you get the features you need to grow your business so you can still make a profit while investing in software that helps you track jobs, keep up to date with employees, and view reporting data you can use to be more profitable. You won’t find a better company to work with to grow your business.",
+        question: "How does pricing compare to other tools?",
+        answer: "We're priced competitively with other field service software, but we include more features at each tier. Most customers find they can replace 2-3 separate tools with My Field Service.",
     },
     {
-        question:
-            "Will I be locked into a contract when I sign up for My Field Service?",
-        answer: "We don’t force a contract on you like other field service management companies will. If you’re ever dissatisfied (which we doubt that you will be) there’ll be no contractual details to deal with.",
+        question: "Do I have to sign a contract?",
+        answer: "No. All plans are month-to-month and you can cancel anytime. We believe you'll stay because the product works, not because you're locked in.",
     },
 ]
 

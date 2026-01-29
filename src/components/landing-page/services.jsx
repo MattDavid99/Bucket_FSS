@@ -1,99 +1,106 @@
 import { motion, useInView, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+
 const Services = () => {
   const controls = useAnimation();
   const ref = useRef(null);
-  const inView = useInView(ref);
-  // animation for boxs
+  const inView = useInView(ref, { once: true, margin: '-100px' });
 
   useEffect(() => {
     if (inView) {
       controls.start('visible');
     }
   }, [controls, inView]);
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        delay: i * 0.2,
+        ease: 'easeOut',
+      },
+    }),
+  };
+
+  const services = [
+    {
+      image: '/landing-page/service1.jpg',
+      title: 'Streamlined Job Management',
+      description: 'Track every job from booking to completion. Know who\'s where, what\'s done, and what\'s next—at a glance.',
+      cartoon: '/cartoon/cleaner.png',
+    },
+    {
+      image: '/landing-page/Customers-Img.png',
+      title: 'Active Customer Engagement',
+      description: 'Send appointment reminders, follow up after jobs, and keep customers coming back with automated messages.',
+    },
+    {
+      image: '/landing-page/service3.jpg',
+      title: 'Data-Driven Decision Making',
+      description: 'See which jobs are profitable, which technicians are busiest, and where your business is growing.',
+    },
+  ];
+
   return (
-    <section className="container m-auto h-fit">
-      <div className="text-center">
-        <h4 className="mt-24 font-fontRoboto text-18 font-semibold text-[#928F8F] md:text-[1.375rem]">MAKE YOUR LIFE EASY</h4>
-        <div>
-          <h2 className="m-auto my-4 px-14 font-fontOpen text-2xl font-bold leading-10 text-palletteColor9 md:text-heading1 xl:px-96">
-            Simplify complex tasks
-            <br />
-            for <span className="text-palletteColor1">every service industry</span>
+    <section className="py-16 md:py-24 lg:py-32">
+      <div className="container max-w-screen-xl mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-block font-fontInter text-sm font-semibold uppercase tracking-wider text-accent mb-4">
+            BUILT FOR SERVICE BUSINESSES
+          </span>
+          <h2 className="font-fontInter text-3xl md:text-4xl lg:text-5xl font-bold text-primary-950 leading-tight mb-6">
+            One platform to manage{' '}
+            <span className="text-accent">jobs, customers, and payments</span>
           </h2>
+          <p className="font-fontInter text-lg text-textSecondary">
+            Everything you need to run your service business—from the first call to the final invoice—without switching between apps.
+          </p>
         </div>
-        <p className="m-auto mb-8 mt-2 px-14 font-fontOpen text-base font-medium text-palletteColor14 md:px-56">
-          My Field Service offers a comprehensive suite of top-tier functionalities tailored for home services enterprises, seamlessly integrated
-          <br />
-          within a user-friendly application.
-        </p>
-      </div>
-      <div ref={ref} className="mt-6 flex flex-col gap-16 px-12 text-center md:mt-2 md:flex-row">
-        <motion.div
-          animate={controls}
-          initial="hidden"
-          transition={{ duration: 0.7 }}
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: -100 },
-          }}
-          className="h-fit rounded-2xl border border-stone-200 p-6 relative">
-          <img src="/cartoon/cleaner.png" alt="Cartoon Image" className="absolute -top-32 left-4 hidden h-[8rem] lg:block" />
-          <img
-            src="/landing-page/service1.jpg"
-            className="h-[16.25rem] w-full rounded-t-2xl object-contain"
-            alt="Service for Streamlined Job Management"
-          />
 
-          <h2 className="font-fontInter text-xl font-bold text-palletteColor5">Streamlined Job Management</h2>
-          <p className="mb-4 mt-2 font-fontOpen text-[#999999]">
-            From initial contact to final invoice, our platform offers precision in every step. Simplify job tracking and management
-            seamlessly.
-          </p>
-        </motion.div>
-        <motion.div
-          className="h-fit rounded-2xl border border-stone-200 p-6"
-          animate={controls}
-          initial="hidden"
-          transition={{ duration: 1 }}
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: -100 },
-          }}>
-          <img
-            src="/landing-page/Customers-Img.png"
-            className="h-[16.25rem] w-full rounded-t-2xl object-contain"
-            alt="Service for Active Customer Engagement"
-          />
-          <h2 className="font-fontInter text-xl font-bold text-palletteColor5">Active Customer Engagement</h2>
-          <p className="mb-4 mt-2 font-fontOpen text-[#999999]">
-            Strengthen client connections with our full suite ofengagement tools, ensuring every interaction fromappointment to follow-up is
-            impactful.
-          </p>
-        </motion.div>
-        <motion.div
-          animate={controls}
-          initial="hidden"
-          transition={{ duration: 1 }}
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: -100 },
-          }}
-          className="h-fit rounded-2xl border border-stone-200 p-6">
-          <img
-            src="/landing-page/service3.jpg"
-            className="h-[16.25rem] w-full rounded-t-2xl object-contain"
-            alt="Service for Data-Driven Decision Making"
-          />
-
-          <h2 className="font-fontInter text-xl font-bold text-palletteColor5">Data-Driven Decision Making</h2>
-          <p className="mb-4 mt-2 font-fontOpen text-[#999999]">
-            Leverage analytics for informed decisions. Our toolsoffer comprehensive, precise insights for enhancedbusiness performance in
-            real time.
-          </p>
-        </motion.div>
+        {/* Service Cards */}
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              custom={index}
+              animate={controls}
+              initial="hidden"
+              variants={cardVariants}
+              className="group relative bg-white rounded-2xl p-6
+                         shadow-soft hover:shadow-hover
+                         transform hover:-translate-y-2 hover:scale-[1.02]
+                         transition-all duration-300 ease-out
+                         border border-slate-100">
+              {service.cartoon && (
+                <img
+                  src={service.cartoon}
+                  alt=""
+                  className="absolute -top-24 left-4 hidden lg:block h-24 opacity-80"
+                />
+              )}
+              <div className="overflow-hidden rounded-xl mb-6">
+                <img
+                  src={service.image}
+                  className="h-56 w-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                  alt={service.title}
+                />
+              </div>
+              <h3 className="font-fontInter text-xl font-bold text-primary-950 mb-3">
+                {service.title}
+              </h3>
+              <p className="font-fontInter text-textSecondary leading-relaxed">
+                {service.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
+
 export default Services;

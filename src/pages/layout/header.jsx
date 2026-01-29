@@ -5,14 +5,14 @@ const Header = () => {
   return (
     <header>
       {/* Top Banner Section */}
-      <section className="hidden bg-palletteColor3 font-fontbase md:block" role="banner" aria-label="Promotional banner">
-        <div className="container-width container m-auto flex h-[2.31rem] max-w-screen-2xl flex-row items-center gap-[2.688rem] text-white">
+      <section className="hidden bg-primary-950 font-fontInter md:block" role="banner" aria-label="Promotional banner">
+        <div className="container-width container m-auto flex h-10 max-w-screen-2xl flex-row items-center gap-8 text-white">
           <article className="basis-3/4">
             <a
               href="/pricing"
-              className="cursor-pointer text-14 underline hover:text-[#82ce51]"
+              className="cursor-pointer text-sm link-underline hover:text-accent transition-colors"
               aria-label="View limited time offer details">
-              Limited time offer: Save up to 40% <span className="font-bold text-[#82ce51]">Save now</span>
+              Limited time offer: Save up to 40% <span className="font-bold text-accent">Save now</span>
             </a>
           </article>
           {/* Contact Information */}

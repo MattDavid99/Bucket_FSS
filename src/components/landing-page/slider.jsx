@@ -24,26 +24,26 @@ const responsive = {
 const SliderCards = [
   {
     imageSrc: '/landing-page/Blog4.png',
-    title: 'Insights For Your Business',
-    description: 'Discover insights, guids, articles,resources, and more from the team at My Field Service',
+    title: 'How to Price Your Service Jobs',
+    description: 'A practical guide to job costing and profitable pricing for service businesses.',
     link: '#',
   },
   {
     imageSrc: '/landing-page/Blog4.png',
-    title: 'Insights For Your Business',
-    description: 'Discover insights, guids, articles,resources, and more from the team at My Field Service',
+    title: '5 Ways to Reduce No-Shows',
+    description: 'Automated reminders and scheduling tips that keep your calendar full.',
     link: '#',
   },
   {
     imageSrc: '/landing-page/Blog3.png',
     title: "What's New in My Field Service",
-    description: 'Stay up to date with the latest features and updates from My Field Service',
+    description: 'See the latest features and improvements we\'ve shipped this month.',
     link: '#',
   },
   {
     imageSrc: '/landing-page/Blog2.png',
-    title: 'Insights For Your Business',
-    description: 'Discover insights, guids, articles,resources, and more from the team at My Field Service',
+    title: 'Getting Started Guide',
+    description: 'Set up your account, add your team, and schedule your first job in minutes.',
     link: '#',
   },
 ];

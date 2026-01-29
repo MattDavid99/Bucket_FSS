@@ -2,19 +2,19 @@ import { EmailInput } from '@components/common';
 
 const GetInTouch2 = () => {
   return (
-    <div className="py-8 lg:py-28 bg-palletteColor10">
-      <div className="relative mt-4 h-fit  px-4 lg:px-14  block overflow-hidden">
-        <div className="relative flex flex-col items-center justify-center md:justify-start">
-          <p className="font-Open text-center text-[1.375rem] font-semibold text-[#666666] md:text-left">
-            GET IN TOUCH: <span className="text-palletteColor1">222-222-2222</span>
+    <section className="py-16 lg:py-24 bg-gradient-to-b from-surface to-white">
+      <div className="container max-w-screen-xl mx-auto px-4">
+        <div className="flex flex-col items-center text-center">
+          <p className="font-fontInter text-lg font-semibold text-textSecondary mb-2">
+            GET IN TOUCH: <a href="tel:222-222-2222" className="text-accent hover:text-accentHover transition-colors">222-222-2222</a>
           </p>
-          <h2 className="mb-4 text-center font-fontOpen text-[2.18rem] font-bold text-palletteColor9 md:text-left">
-            Grow your business now
+          <h2 className="font-fontInter text-3xl md:text-4xl lg:text-5xl font-bold text-primary-950 mb-8">
+            Ready to simplify your operations?
           </h2>
+          <EmailInput className="w-full max-w-xl" />
         </div>
       </div>
-      <EmailInput className="w-full" />
-    </div>
+    </section>
   );
 };
 

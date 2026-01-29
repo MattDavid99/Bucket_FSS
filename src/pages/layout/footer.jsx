@@ -2,10 +2,10 @@ import { FooterMenu } from './footer-items';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-palletteColor4 pt-8">
-      <div className="container mx-auto w-full">
+    <footer className="w-full bg-primary-950 pt-12">
+      <div className="container mx-auto w-full max-w-screen-xl">
         {/* Logo and Social Media Section */}
-        <div className="flex flex-col items-center justify-center gap-7 border-b border-[#6C6C70] pb-12 px-4 lg:flex-row lg:justify-between lg:gap-0">
+        <div className="flex flex-col items-center justify-center gap-7 border-b border-primary-800 pb-12 px-4 lg:flex-row lg:justify-between lg:gap-0">
           <a href="/" className="flex justify-center lg:justify-start" aria-label="Buckets home">
             <img src="/footer/AAA-MAIN-WHITE.png" alt="Buckets logo" className="w-60" />
           </a>
@@ -48,15 +48,15 @@ const Footer = () => {
         </div>
 
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 gap-8 py-8 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12 lg:py-14">
+        <div className="grid grid-cols-1 gap-8 py-12 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12 lg:py-16">
           {/* Menu Items */}
           {FooterMenu.map((menu, index) => (
             <nav key={index} className="flex flex-col items-center sm:items-start">
-              <h4 className="mb-4 font-fontOpen text-base text-[#FFFFFF66]">{menu.title}</h4>
-              <ul className="flex flex-col items-center gap-1 sm:items-start">
+              <h4 className="mb-4 font-fontInter text-sm font-semibold uppercase tracking-wider text-textMuted">{menu.title}</h4>
+              <ul className="flex flex-col items-center gap-2 sm:items-start">
                 {menu.links.map((link, index) => (
                   <li key={index}>
-                    <a href={link.link} className="font-fontOpen text-14 text-white transition-colors hover:text-palletteColor1">
+                    <a href={link.link} className="font-fontInter text-sm text-slate-300 transition-colors hover:text-accent">
                       {link.title}
                     </a>
                   </li>
@@ -67,33 +67,29 @@ const Footer = () => {
 
           {/* Contact Information */}
           <address className="flex flex-col items-center sm:items-start" style={{ fontStyle: 'normal' }}>
-            <h4 className="mb-4 font-fontOpen text-base text-[#FFFFFF66]">Contact Us</h4>
+            <h4 className="mb-4 font-fontInter text-sm font-semibold uppercase tracking-wider text-textMuted">Contact Us</h4>
             <div className="flex flex-col gap-4">
-              <div className="flex items-center rounded-[0.8rem] bg-[#3E3E47] p-1 font-fontOpen">
+              <div className="flex items-center rounded-xl bg-primary-900/50 p-2 font-fontInter transition-colors hover:bg-primary-800/50">
                 <div className="p-2">
                   <img className="size-5" src="/footer/Calling.png" alt="" aria-hidden="true" />
                 </div>
-                <div className="border-l border-gray-500">
-                  <div className="ml-2">
-                    <p className="text-[0.625rem] text-[#FFFFFF66]">Phone</p>
-                    <a href="tel:(222)222-2222" className="text-[0.75rem] text-white">
-                      (222)222-2222
-                    </a>
-                  </div>
+                <div className="border-l border-primary-700 pl-3">
+                  <p className="text-xs text-textMuted">Phone</p>
+                  <a href="tel:(222)222-2222" className="text-sm text-white hover:text-accent transition-colors">
+                    (222)222-2222
+                  </a>
                 </div>
               </div>
 
-              <div className="flex items-center rounded-[0.8rem] bg-[#3E3E47] p-1 font-fontOpen">
+              <div className="flex items-center rounded-xl bg-primary-900/50 p-2 font-fontInter transition-colors hover:bg-primary-800/50">
                 <div className="p-2">
                   <img className="size-5" src="/footer/Message.png" alt="" aria-hidden="true" />
                 </div>
-                <div className="border-l border-gray-500">
-                  <div className="ml-2">
-                    <p className="text-[0.625rem] text-[#FFFFFF66]">Email</p>
-                    <a href="mailto:support@myfieldservice.com" className="text-[0.75rem] text-white">
-                      support@myfieldservice.com
-                    </a>
-                  </div>
+                <div className="border-l border-primary-700 pl-3">
+                  <p className="text-xs text-textMuted">Email</p>
+                  <a href="mailto:support@myfieldservice.com" className="text-sm text-white hover:text-accent transition-colors">
+                    support@myfieldservice.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -102,19 +98,19 @@ const Footer = () => {
       </div>
 
       {/* Copyright Section */}
-      <div className="w-full bg-[#24242B]">
-        <div className="container mx-auto flex flex-col items-center justify-center gap-4 px-4 py-4 sm:flex-row sm:justify-between sm:gap-0">
-          <p className="font-fontInter text-sm text-white">
+      <div className="w-full bg-black/20">
+        <div className="container mx-auto max-w-screen-xl flex flex-col items-center justify-center gap-4 px-4 py-5 sm:flex-row sm:justify-between sm:gap-0">
+          <p className="font-fontInter text-sm text-slate-400">
             © 2024 All rights reserved by{' '}
-            <a href="/" className="hover:text-palletteColor1">
+            <a href="/" className="text-white hover:text-accent transition-colors">
               My Field Service
             </a>
           </p>
-          <nav className="flex space-x-4" aria-label="Legal links">
-            <a href="#" className="font-fontOpen text-white underline hover:text-gray-500">
+          <nav className="flex space-x-6" aria-label="Legal links">
+            <a href="#" className="font-fontInter text-sm text-slate-400 hover:text-white transition-colors">
               Terms of Use
             </a>
-            <a href="#" className="font-fontOpen text-white underline hover:text-gray-500">
+            <a href="#" className="font-fontInter text-sm text-slate-400 hover:text-white transition-colors">
               Privacy Policy
             </a>
           </nav>
